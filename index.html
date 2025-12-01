@@ -599,8 +599,8 @@
       <div class="sort">
         <label for="sort" class="visually-hidden">Sortieren</label>
         <select id="sort">
-          <option value="stars" selected>★ Sterne</option>
-          <option value="updated">Aktivität</option>
+          <option value="stars">★ Sterne</option>
+          <option value="updated" selected>Aktivität</option>
           <option value="name">Name A–Z</option>
         </select>
       </div>
@@ -639,69 +639,70 @@
     // ───────────────────────────────────────────────────────────────
     const REPOS = [
       {
-        name: 'bike-routing-app',
-        description: 'Progressive Web App für Fahrrad-Routing mit interaktiven Karten und GPX-Export. Offline-fähig und mobiloptimiert.',
-        language: 'TypeScript',
-        stars: 12,
-        forks: 3,
-        topics: ['pwa', 'maps', 'gpx', 'routing', 'typescript', 'leaflet'],
+        name: 'Web',
+        description: 'Statische Repo-Galerie für GitHub Pages.',
+        language: 'HTML',
+        stars: 0,
+        forks: 0,
+        topics: ['github-pages', 'gallery', 'static', 'vanilla-js'],
         license: 'MIT',
-        updated: '2025-01-15T10:30:00.000Z',
+        updated: new Date(document.lastModified).toISOString(),
+        codeUrl: 'https://github.com/TimInTech/Web',
+        demoUrl: 'https://timintech.github.io/Web/'
+      },
+      {
+        name: 'bike-routing-app',
+        description: 'Interaktive Karten-App mit GPX-Export.',
+        language: 'TypeScript',
+        stars: 0,
+        forks: 0,
+        topics: ['pwa', 'maps', 'gpx', 'routing'],
+        license: 'MIT',
+        updated: '2025-01-01T00:00:00.000Z',
         codeUrl: 'https://github.com/TimInTech/bike-routing-app',
-        demoUrl: 'https://timintech.github.io/bike-routing-app/'
+        demoUrl: 'https://github.com/TimInTech/bike-routing-app'
       },
       {
         name: 'minecraft-server-Proxmox',
-        description: 'Automatisierte Einrichtung eines Minecraft-Servers in Proxmox VM/LXC mit Backup-System und Performance-Monitoring.',
+        description: 'Automatisierte Einrichtung Minecraft in VM/LXC.',
         language: 'Shell',
-        stars: 8,
-        forks: 2,
-        topics: ['proxmox', 'minecraft', 'automation', 'devops', 'linux'],
+        stars: 0,
+        forks: 0,
+        topics: ['proxmox', 'minecraft', 'automation'],
         license: 'MIT',
-        updated: '2025-01-10T14:20:00.000Z',
+        updated: '2025-01-01T00:00:00.000Z',
         codeUrl: 'https://github.com/TimInTech/minecraft-server-Proxmox',
         demoUrl: 'https://github.com/TimInTech/minecraft-server-Proxmox'
       },
       {
         name: 'Pi-hole-Unbound-PiAlert-Setup',
-        description: 'Komplette Lösung für DNS-Blocking, lokalen DNS-Resolver und Netzwerk-Monitoring. Datenschutz-freundlich und sicher.',
+        description: 'Lokales DNS + Netz-Monitoring.',
         language: 'Shell',
-        stars: 15,
-        forks: 4,
-        topics: ['pihole', 'unbound', 'pialert', 'dns', 'privacy', 'security'],
+        stars: 0,
+        forks: 0,
+        topics: ['pihole', 'unbound', 'pialert', 'dns'],
         license: 'MIT',
-        updated: '2025-01-08T09:45:00.000Z',
+        updated: '2025-01-01T00:00:00.000Z',
         codeUrl: 'https://github.com/TimInTech/Pi-hole-Unbound-PiAlert-Setup',
         demoUrl: 'https://github.com/TimInTech/Pi-hole-Unbound-PiAlert-Setup'
       },
       {
-        name: 'Web',
-        description: 'Moderne Portfolio-Galerie für GitHub Pages. Statisch, schnell, responsiv und ohne Framework gebaut.',
-        language: 'HTML',
-        stars: 5,
-        forks: 1,
-        topics: ['github-pages', 'portfolio', 'static', 'vanilla-js', 'responsive'],
-        license: 'MIT',
-        updated: new Date().toISOString(),
-        codeUrl: 'https://github.com/TimInTech/Web',
-        demoUrl: 'https://timintech.github.io/Web/'
-      },
-      {
         name: 'Pi-hole-v6.0---Comprehensive-Guide',
-        description: 'Umfassender deutscher Guide für Pi-hole v6.0 mit Best Practices, Troubleshooting und fortgeschrittenen Konfigurationen.',
+        description: 'Umfassender Pi-hole v6 Guide.',
         language: 'Markdown',
-        stars: 6,
-        forks: 1,
-        topics: ['pihole', 'guide', 'dns', 'documentation', 'german'],
+        stars: 0,
+        forks: 0,
+        topics: ['pihole', 'guide', 'dns'],
         license: 'MIT',
-        updated: '2025-01-05T16:00:00.000Z',
+        updated: '2025-01-01T00:00:00.000Z',
         codeUrl: 'https://github.com/TimInTech/Pi-hole-v6.0---Comprehensive-Guide',
         demoUrl: 'https://github.com/TimInTech/Pi-hole-v6.0---Comprehensive-Guide'
       }
     ];
 
     // Minimum-Sterne-Filter: Nur Repos mit mindestens diesem Wert werden angezeigt
-    const MIN_STARS = 1;
+    // Setze auf 0, um alle Repos anzuzeigen (auch solche ohne Sterne)
+    const MIN_STARS = 0;
 
     // ───────────────────────────────────────────────────────────────
     // DOM-Referenzen
@@ -722,7 +723,7 @@
     const state = {
       query: '',
       chip: null,
-      sort: 'stars'  // Standard: Nach Sternen sortieren
+      sort: 'updated'  // Standard: Nach Aktivität sortieren
     };
 
     // ───────────────────────────────────────────────────────────────
