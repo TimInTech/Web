@@ -18,7 +18,7 @@
   {
     "title": "Komoot",
     "description": "Folge meinen Outdoor-Touren und Routen",
-    "url": "https://www.komoot.com/de-de/user/425821879121",
+    "url": "https://www.komoot.com/de-de/user/4125821879121",
     "icon": "komoot",
     "color": "#ffffff",
     "bgColor": "#6AA127"
@@ -34,41 +34,33 @@
   {
     "title": "Spotify",
     "description": "Hör dir meine Playlists an",
-    "url": "https://open.spotify.com/user/3ltrw4ssq0zh7kzsq42d2nk6i",
+    "url": "https://open.spotify.com/user/31twr4ssoq2h7kzsg4z2d2nk6iza?si=df4f5d762b554433",
     "icon": "spotify",
     "color": "#ffffff",
     "bgColor": "#1DB954"
   },
   {
-    "title": "YouTube",
-    "description": "Subscribe for tech tutorials and vlogs",
-    "url": "https://youtube.com/@TimInTech",
-    "icon": "youtube",
+    "title": "Telegram",
+    "description": "Folge mir auf Telegram",
+    "url": "https://t.me/timintech",
+    "icon": "telegram",
     "color": "#ffffff",
-    "bgColor": "#FF0000"
+    "bgColor": "#0088cc"
   },
   {
-    "title": "X (Twitter)",
-    "description": "Follow me for tech updates and thoughts",
-    "url": "https://twitter.com/TimInTech",
-    "icon": "twitter",
+    "title": "Discord",
+    "description": "Join my Discord community",
+    "url": "https://discord.com/invite/Tim_InTech",
+    "icon": "discord",
     "color": "#ffffff",
-    "bgColor": "#000000"
+    "bgColor": "#5865F2"
   },
   {
-    "title": "Threads",
-    "description": "Connect with me on Meta's Threads",
-    "url": "https://threads.net/@timintech",
-    "icon": "threads",
+    "title": "Instagram",
+    "description": "Follow my tech journey",
+    "url": "https://instagram.com/t.c.baumann",
+    "icon": "instagram",
     "color": "#ffffff",
-    "bgColor": "#000000"
-  },
-  {
-    "title": "Pinterest",
-    "description": "Find my tech setups and inspiration boards",
-    "url": "https://pinterest.com/timintech",
-    "icon": "pinterest",
-    "color": "#ffffff",
-    "bgColor": "#E60023"
+    "bgColor": "#E4405F"
   }
 ]
